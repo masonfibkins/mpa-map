@@ -11,6 +11,82 @@
 
     map.on('load', () => {
 
+        map.addSource('loan', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [38.5, 2.85]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [17.2, -3.5]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [38.2, -2.7]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [38, -10.4]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [29.8, -14]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Loan Program</strong> <p>MPA supports individual income projects, group projects, savings and credit unions.</p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [28.4, -20]
+                        }
+                    }
+
+                ]
+            }
+        });
+
         map.addSource('cow', {
             'type': 'geojson',
             'data': {
@@ -24,7 +100,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [38.5, 2.85]
+                            'coordinates': [38.5, 1.4]
                         }
                     }
 
@@ -67,7 +143,7 @@
                         },
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [37, 2.7]
+                            'coordinates': [37, 1.4]
                         }
                     },
                     {
@@ -125,6 +201,18 @@
             'source': 'cow',
             'paint': {
                 'circle-color': '#d55900',
+                'circle-radius': 8,
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#ffffff'
+            }
+        });
+
+        map.addLayer({
+            'id': 'loan',
+            'type': 'circle',
+            'source': 'loan',
+            'paint': {
+                'circle-color': '#cbc92f',
                 'circle-radius': 8,
                 'circle-stroke-width': 2,
                 'circle-stroke-color': '#ffffff'
